@@ -1,0 +1,51 @@
+{
+  "name": "react-native-firebaseql",
+  "version": "1.0.0",
+  "description": "Query library for react-native-firebase",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "files": [
+    "dist",
+    "esm",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zalo003/react-native-firebaseQL.git"
+  },
+  "keywords": [
+    "firebase",
+    "react-native-firebase",
+    "firebaseQL",
+    "react-native-firebaseQL"
+  ],
+  "author": "Breedware Limited",
+  "license": "MIT",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/zalo003/react-native-firebaseQL/issues"
+  },
+  "homepage": "https://github.com/zalo003/react-native-firebaseQL#readme",
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:cjs": "tsc --module commonjs --outDir dist",
+    "build:esm": "tsc --target esnext --outDir esm",
+    "preversion": "npm run build",
+    "postversion": "git push --follow-tags"
+  },
+  "prepublish": "tsc",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "rimraf": "^5.0.1",
+    "source-map-loader": "^4.0.1",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@react-native-firebase/auth": "^19.2.2",
+    "@react-native-firebase/firestore": "^19.2.2",
+    "@react-native-firebase/storage": "^19.2.2",
+    "firebase": "^10.11.0"
+  }
+}
