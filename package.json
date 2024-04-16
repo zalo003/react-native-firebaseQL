@@ -1,6 +1,6 @@
 {
   "name": "react-native-firebaseql",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Query library for react-native-firebase",
   "main": "dist/index.js",
   "module": "esm/index.js",
@@ -19,7 +19,7 @@
     "firebaseQL",
     "react-native-firebaseQL"
   ],
-  "author": "Breedware Limited",
+  "author": "Breedware Limited <breedware@gmail.com>",
   "license": "MIT",
   "private": false,
   "bugs": {
